@@ -109,7 +109,8 @@ struct display {
  */
 static struct phosphor p17[] = {
     {0.11, 0.11, 1.0,  0.5, 0.05},  /* fast blue */
-    {1.0,  1.0,  0.11, 0.5, 0.20}   /* slow yellow/green */
+    {1.0,  1.0,  0.11,  0.5, 0.05}  /* fast yellow/green */
+    // {1.0,  1.0,  0.11, 0.5, 0.20}   /* slow yellow/green */
 };
 static struct color color_p17 = { p17, ELEMENTS(p17), 125000 };
 
@@ -1011,8 +1012,8 @@ display_keydown(int k)
     case 'd': case 'D': spacewar_switches |= 02; break; /* engines */
     case 'a': case 'A': spacewar_switches |= 04; break; /* rotate R */
     case 's': case 'S': spacewar_switches |= 010; break; /* rotate L */
-    case '\'': case '"': spacewar_switches |= 040000; break; /* torpedos */
-    case ';': case ':': spacewar_switches |= 0100000; break; /* engines */
+    case 'n': case 'N': case '\'': case '"': spacewar_switches |= 040000; break; /* torpedos */
+    case 'm': case 'M': case ';': case ':': spacewar_switches |= 0100000; break; /* engines */
     case 'k': case 'K': spacewar_switches |= 0200000; break; /* rotate R */
     case 'l': case 'L': spacewar_switches |= 0400000; break; /* rotate L */
     default: return;
@@ -1032,8 +1033,8 @@ display_keyup(int k)
     case 'a': case 'A': spacewar_switches &= ~04; return;
     case 's': case 'S': spacewar_switches &= ~010; return;
 
-    case '\'': case '"': spacewar_switches &= ~040000; return;
-    case ';': case ':': spacewar_switches &= ~0100000; return;
+    case 'n': case 'N': case '\'': case '"': spacewar_switches &= ~040000; return;
+    case 'm': case 'M': case ';': case ':': spacewar_switches &= ~0100000; return;
     case 'k': case 'K': spacewar_switches &= ~0200000; return;
     case 'l': case 'L': spacewar_switches &= ~0400000; return;
 
