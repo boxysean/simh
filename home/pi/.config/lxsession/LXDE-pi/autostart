@@ -4,4 +4,6 @@
 @point-rpi
 @lxterminal -e /home/pi/workspace/simh/launch.sh >> /home/pi/spacewar.log
 @unclutter -idle 0
-
+@xset s noblank
+@xset s off
+@xset -dpms
