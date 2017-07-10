@@ -1615,7 +1615,7 @@ int vid_video_events (void)
         vid_image = SDL_CreateRGBSurface (SDL_SWSURFACE, vid_width, vid_height, 32, 0xff000000, 0x00ff0000, 0x0000ff00, 0x000000ff);
 
 #else
-    SDL_CreateWindowAndRenderer (400, 400, SDL_WINDOW_SHOWN | SDL_WINDOW_BORDERLESS | SDL_WINDOW_RESIZABLE | SDL_WINDOW_INPUT_FOCUS, &vid_window, &vid_renderer);
+    SDL_CreateWindowAndRenderer (420, 420, SDL_WINDOW_SHOWN | SDL_WINDOW_BORDERLESS | SDL_WINDOW_RESIZABLE | SDL_WINDOW_INPUT_FOCUS, &vid_window, &vid_renderer);
 
     if ((vid_window == NULL) || (vid_renderer == NULL)) {
         sim_printf ("%s: Error Creating Video Window: %s\n", sim_dname(vid_dev), SDL_GetError());
