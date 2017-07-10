@@ -108,8 +108,8 @@ struct display {
  * not even sure Type30 really used P17 (guess by Daniel P. B. Smith)
  */
 static struct phosphor p17[] = {
-    {0.11, 0.11, 1.0,  0.5, 0.05},  /* fast blue */
-    {1.0,  1.0,  0.11,  0.5, 0.05}  /* fast yellow/green */
+    {0.11, 0.11, 1.0,  0.5, 0.04},  /* fast blue */
+    {1.0,  1.0,  0.11,  0.5, 0.04}  /* fast yellow/green */
     // {1.0,  1.0,  0.11, 0.5, 0.20}   /* slow yellow/green */
 };
 static struct color color_p17 = { p17, ELEMENTS(p17), 125000 };
