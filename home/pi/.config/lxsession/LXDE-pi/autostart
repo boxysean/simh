@@ -7,3 +7,4 @@
 @xset s noblank
 @xset s off
 @xset -dpms
+@xdotool mousemove 1000 1000
